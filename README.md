@@ -25,7 +25,7 @@ Developed by: VINNUSH KUMAR L S
 RegisterNumber:  212223230244
 */
 
-
+```
 import numpy as np
 import pandas as pd
 from sklearn.datasets import load_iris
@@ -45,12 +45,12 @@ df['target']=iris.target
 
 
 print(df.head())
-
+```
 ## Output:
 ![image](https://github.com/user-attachments/assets/71a66a3e-154b-49b5-803b-4aed0f733e74)
 
 
-
+```
 X = df.drop('target',axis=1)
 y=df['target']
 X_train, X_test, y_train, y_test = train_test_split(X, y,test_size=0.2, random_state=42)
@@ -62,15 +62,15 @@ y_pred = sgd_clf.predict(X_test)
 sgd_clf.fit(X_train, y_train)
 accuracy=accuracy_score(y_test, y_pred)
 print(f"Accuracy: {accuracy:.3f}")
-
+```
 ## Output:
 ![image](https://github.com/user-attachments/assets/c0b98cba-1bbe-40f9-b55d-aea197a3230d)
 
-
+```
 cm = confusion_matrix(y_test, y_pred) 
 print("Confusion Matrix:")
 print(cm)
-
+```
 ## Output:
 ![image](https://github.com/user-attachments/assets/827c4843-afa6-48f2-a12b-f0614c5a8c79)
 
